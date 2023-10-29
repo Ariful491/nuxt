@@ -1,7 +1,9 @@
 <template>
-  <div> 
-    <div>
-       <a href=""  class="py-3 px-2 rounded bg-red-600 shadow text-white font-semibold"> THIS IS BUTTON</a>
-    </div>
+  <div>
+    <!-- NAVBAR -->
+    <header class="sticky top-0 z-50  flex justify-between space-x-1 shadow-md p-4  items-center border-b bg-white">
+      <a href="" class="text-2xl font-mono uppercase font-bold"> Car Mover</a>
+    </header>
+    <!-- NAVBAR -->
   </div>
 </template>
