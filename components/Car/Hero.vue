@@ -7,9 +7,11 @@
         <h1 class="text-8xl font-serif mb-10 text-white">
           Find Your Driver
         </h1>
+
         <!-- HOME SEARCH BAR -->
           <CarSearchBar/>
         <!-- HOME SEARCH BAR -->
+
       </div>
     </div>
     <div class="z-1 absolute w-full h-full bg-black opacity-50">
