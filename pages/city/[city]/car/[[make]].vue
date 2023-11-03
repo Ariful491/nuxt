@@ -3,7 +3,7 @@
 </script>
 
 <template>
-   <div>City And Make</div>
+   <div>    City And Make  </div>
 </template>
 
 <style scoped>
