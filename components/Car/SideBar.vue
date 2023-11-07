@@ -1,6 +1,5 @@
 <script setup lang="ts">
 </script>
-
 <template>
   <div class="shadow border w-64 mr-10 z-30 h-[190px]">
     <div class="p-5 flex justify-between relative cursor-pointer border-b">
