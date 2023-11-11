@@ -13,7 +13,7 @@
 
 
     <!-- CAR ATTRIBUTES -->
-    <CarDetailAtrributes/>
+    <CarDetailAttributes/>
     <!-- CAR ATTRIBUTES -->
 
     <!-- CAR DESCRIPTION -->
