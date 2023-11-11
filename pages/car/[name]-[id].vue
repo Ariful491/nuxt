@@ -1,5 +1,9 @@
 <script setup lang="ts">
+const route = useRoute();
 
+useHead({
+  title: `${route.params.name}`
+})
 </script>
 
 <template>
@@ -17,11 +21,11 @@
     <!-- CAR ATTRIBUTES -->
 
     <!-- CAR DESCRIPTION -->
-   <CarDetailDescription/>
+    <CarDetailDescription/>
     <!-- CAR DESCRIPTION -->
 
     <!-- CAR CONTACT -->
-   <CarDetailContact/>
+    <CarDetailContact/>
     <!-- CAR CONTACT -->
   </div>
   <!-- CAR DETAIL PAGE   -->
