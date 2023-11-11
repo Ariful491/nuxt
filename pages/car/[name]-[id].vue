@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import {definePageMeta} from "#imports";
 
+const {toTitleCase} = useUtilities()
 const route = useRoute();
 
 useHead({
-  title: `${route.params.name}`
+  title: `${toTitleCase(route.params.name)}`
 })
 
 definePageMeta({
@@ -15,25 +16,24 @@ definePageMeta({
 <template>
   <!-- CAR DETAIL PAGE -->
 
-    <div>
-      <!-- CAR HERO -->
-      <CarDetailHero/>
-      <!-- CAR HERO -->
+  <div>
+    <!-- CAR HERO -->
+    <CarDetailHero/>
+    <!-- CAR HERO -->
 
-      <!-- CAR ATTRIBUTES -->
-      <CarDetailAttributes/>
-      <!-- CAR ATTRIBUTES -->
+    <!-- CAR ATTRIBUTES -->
+    <CarDetailAttributes/>
+    <!-- CAR ATTRIBUTES -->
 
-      <!-- CAR DESCRIPTION -->
-      <CarDetailDescription/>
-      <!-- CAR DESCRIPTION -->
+    <!-- CAR DESCRIPTION -->
+    <CarDetailDescription/>
+    <!-- CAR DESCRIPTION -->
 
-      <!-- CAR CONTACT -->
-      <CarDetailContact/>
-      <!-- CAR CONTACT -->
+    <!-- CAR CONTACT -->
+    <CarDetailContact/>
+    <!-- CAR CONTACT -->
 
-    </div>
-
+  </div>
 
 
   <!-- CAR DETAIL PAGE   -->
