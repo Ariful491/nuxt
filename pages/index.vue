@@ -1,8 +1,11 @@
 <script setup lang="ts">
+useHead({
+  title: "Car Driver"
+})
 </script>
 
 <template>
-   <CarHero/>
+  <CarHero/>
 </template>
 
 <style scoped>

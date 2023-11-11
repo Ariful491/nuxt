@@ -1,5 +1,18 @@
 <script setup lang="ts">
+const  route = useRoute();
 
+useHead({
+  title: `Cars in ${toTitleCase(route.params.city)}`
+})
+
+function toTitleCase(str) {
+  return str.replace(
+      /\w\S*/g,
+      function(txt) {
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+      }
+  );
+}
 </script>
 
 <template>
