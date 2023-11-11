@@ -1,5 +1,5 @@
 export const useUtilities = () => {
-    function toTitleCase(str: any) {
+    function toTitleCase(str: string) {
         return str.replace(
             /\w\S*/g,
             function (txt) {
