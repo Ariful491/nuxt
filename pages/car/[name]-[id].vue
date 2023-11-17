@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import {definePageMeta, useCars} from "#imports";
 
+
 const {toTitleCase} = useUtilities()
 const route = useRoute();
 const {cars} = useCars();
@@ -10,18 +11,25 @@ useHead({
 
 const car = computed(() => {
   return cars.find((car) => {
-    return car.id ===  Number(route.params.id)
+    return car.id === Number(route.params.id)
   })
 })
 definePageMeta({
   layout: "custom"
 })
+
+if (!car.value) {
+  throw createError({
+    statusCode: 404,
+    message: 'car was not found.'
+  })
+}
 </script>
 
 <template>
   <!-- CAR DETAIL PAGE -->
 
-  <div  >
+  <div v-if="car">
 
     <!-- CAR HERO -->
     <CarDetailHero :car="car"/>
@@ -36,7 +44,7 @@ definePageMeta({
     <!-- CAR DESCRIPTION -->
 
     <!-- CAR CONTACT -->
-    <CarDetailContact />
+    <CarDetailContact/>
     <!-- CAR CONTACT -->
 
   </div>
