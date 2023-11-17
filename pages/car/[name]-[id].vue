@@ -1,13 +1,18 @@
 <script setup lang="ts">
-import {definePageMeta} from "#imports";
+import {definePageMeta, useCars} from "#imports";
 
 const {toTitleCase} = useUtilities()
 const route = useRoute();
-
+const {cars} = useCars();
 useHead({
-  title: `${toTitleCase(route.params.name)}`
+  title: `${toTitleCase(route.params.name.toString())}`
 })
 
+const car = computed(() => {
+  return cars.find((car) => {
+    return car.id ===  Number(route.params.id)
+  })
+})
 definePageMeta({
   layout: "custom"
 })
@@ -16,21 +21,22 @@ definePageMeta({
 <template>
   <!-- CAR DETAIL PAGE -->
 
-  <div>
+  <div  >
+
     <!-- CAR HERO -->
-    <CarDetailHero/>
+    <CarDetailHero :car="car"/>
     <!-- CAR HERO -->
 
     <!-- CAR ATTRIBUTES -->
-    <CarDetailAttributes/>
+    <CarDetailAttributes :features="car.features"/>
     <!-- CAR ATTRIBUTES -->
 
     <!-- CAR DESCRIPTION -->
-    <CarDetailDescription/>
+    <CarDetailDescription :description="car.description"/>
     <!-- CAR DESCRIPTION -->
 
     <!-- CAR CONTACT -->
-    <CarDetailContact/>
+    <CarDetailContact />
     <!-- CAR CONTACT -->
 
   </div>
