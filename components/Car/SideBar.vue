@@ -20,11 +20,9 @@
       <h3>
         INDIA
       </h3>
-
       <h3 class="text-blue-400 capitalize">
         BOMBAY
       </h3>
-
     </div>
     <div class="p-5 flex justify-between relative cursor-pointer border-b">
       <h3>
