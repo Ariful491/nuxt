@@ -1,12 +1,23 @@
 <script setup lang="ts">
 const modal = ref({
-  make:  false,
+  make: false,
   location: false,
   price: false
 })
 
-const updateModal = (variable: 'make'| 'location' | 'price' ) => {
-   modal.value[variable] = !modal.value[variable]
+const city = ref("");
+const route = useRoute();
+
+
+const updateModal = (variable: 'make' | 'location' | 'price') => {
+  modal.value[variable] = !modal.value[variable]
+}
+
+const changeLocation = () => {
+  if (!city.value) return;
+  updateModal('location')
+  navigateTo(`/city/${city.value}/car/${route.params.make}`)
+  city.value = "";
 }
 
 </script>
@@ -17,12 +28,12 @@ const updateModal = (variable: 'make'| 'location' | 'price' ) => {
         Location
       </h3>
       <h3 @click="updateModal('location')" class="text-blue-400 capitalize">
-        Dhaka
+        {{ route.params.city }}
       </h3>
 
       <div v-if="modal.location" class="absolute border shadow left-56 p-5 top-1 -m-1 bg-white">
-        <input type="text" class="border focus:outline-none p-1 rounded"/>
-        <button class="bg-blue-400  w-full mt-2 rounded text-white p-1">
+        <input type="text" v-model="city" class="border focus:outline-none p-1 rounded"/>
+        <button @click="changeLocation" class="bg-blue-400  w-full mt-2 rounded text-white p-1">
           Apply
         </button>
       </div>
