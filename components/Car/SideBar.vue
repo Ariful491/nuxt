@@ -1,12 +1,12 @@
 <script setup lang="ts">
 const modal = ref({
-  make: false,
+  make:  false,
   location: false,
   price: false
 })
 
-const updateModal = (variable: any ) => {
-  //modal.value[variable]
+const updateModal = (variable: 'make'| 'location' | 'price' ) => {
+   modal.value[variable] = !modal.value[variable]
 }
 
 </script>
