@@ -16,9 +16,8 @@ interface Car {
 const props = defineProps({
   car: Object as () => Car,
 })
-const favored = useState(`favored-${props.car!.id}`, () => {
-  return false;
-});
+
+
 </script>
 
 <template>
