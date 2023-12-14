@@ -17,6 +17,7 @@ const props = defineProps({
   car: Object as () => Car,
 })
 
+const favored = ref(false);
 
 </script>
 

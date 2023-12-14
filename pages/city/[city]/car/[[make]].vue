@@ -2,12 +2,15 @@
 import {useLocalStorage} from "@vueuse/core";
 
 const {cars} = useCars();
-
-
-
-// const favorites = useLocalStorage<Favorite>("favorites",  [])
-
 /*
+
+
+interface Favorite {
+  id: number
+}
+
+const favorites = useLocalStorage<Favorite>("favorites",  [])
+
 const handleFavorite = (id: number) => {
 
   const isFavorite = favorites.value.some((fav: { id: number; }) => fav.id === id);
@@ -20,8 +23,8 @@ const handleFavorite = (id: number) => {
     favorites.value.push({id});
 
   }
-*/
 
+*/
 
 /*  if (id in favorite.value) {
     delete favorite[id]
@@ -30,7 +33,7 @@ const handleFavorite = (id: number) => {
       ...favorite.value, ['id']: true
     }*/
 
-// }
+}
 </script>
 <template>
   <div>
