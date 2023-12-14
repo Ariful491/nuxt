@@ -33,7 +33,7 @@ const handleFavorite = (id: number) => {
       ...favorite.value, ['id']: true
     }*/
 
-}
+// }
 </script>
 <template>
   <div>
