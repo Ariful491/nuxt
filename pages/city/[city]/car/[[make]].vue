@@ -21,7 +21,6 @@ const handleFavorite = (id: number) => {
   } else {
     // If the car is not in favorites, add it
     favorites.value.push({id});
-
   }
 
 */
