@@ -1,7 +1,6 @@
 <script setup lang="ts">
 const {cars} = useCars();
 
- 
 </script>
 <template>
   <div>
