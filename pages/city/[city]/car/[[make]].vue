@@ -7,6 +7,7 @@ const {cars} = useCars();
     <CarCard v-for="car in cars" :key="car.id" :car="car"/>
   </div>
 </template>
+
 <style scoped>
 
 </style>
